@@ -11,7 +11,7 @@ Instructions to run and test:
     - `curl http://localhost:9090/articles/` to list articles
     - `curl -X PUT http://localhost:9090/articles/article1 -d "New article content"` to create or update an article named `article1`
     - `curl http://localhost:9090/articles/article1` to get `article1` content
-- Test REST API with `npm test`.
+- To test the API: `npm test`.
 
 Technologies and APIs used:
 
