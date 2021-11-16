@@ -7,6 +7,10 @@ Instructions to run and test:
 - `npm install`
 - `npm start`
 - Done! SPA should be listening at localhost:8080 and the REST api at localhost:9090.
+  - Examples for API endpoints:
+    - curl http://localhost:9090/articles/
+    - curl -X PUT http://localhost:9090/articles/article1 -d "New article content"
+    - curl http://localhost:9090/articles/article1
 - Test REST API with `npm test`.
 
 Technologies and APIs used:
