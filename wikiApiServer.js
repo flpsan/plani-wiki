@@ -55,7 +55,7 @@ app2.use(express.urlencoded());
 app2.use(express.static('public'));
 
 //Serve the SPA static asset for those GET routes
-app2.get(['/','/:article', '/edit/:article'], (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
+app2.get(['/','/:article', '/edit/*'], (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
 
 const spaServer = app2.listen(8080);
 console.log(`SPA server is listening on port ${spaServer.address().port}`);

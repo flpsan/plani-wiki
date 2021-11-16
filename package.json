@@ -4,6 +4,7 @@
   "description": "A simple wiki API",
   "main": "index.js",
   "scripts": {
+    "start": "node wikiApiServer.js && node spaServer.js",
     "test": "node test.js"
   },
   "repository": {
