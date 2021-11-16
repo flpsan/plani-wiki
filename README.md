@@ -13,9 +13,10 @@ Yet to do:
 - Unit testing
 - Test a not valid Markdown
 
-Languages and libraries:
+Technologies and APIs used:
 
 - Node.js to provide full back-end funcionality
-- fetch to make http requests to wiki API routes
-- Bootstrap as front-end framework
-- https://github.com/showdownjs/showdown to convert plain text on Markdown notation to HTML
+- [Fetch API](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API) to make http requests
+- [Bootstrap](https://getbootstrap.com/) as front-end framework
+- [showdown.js](https://github.com/showdownjs/showdown) to convert plain text on Markdown notation to HTML
+- [concurrently.js](https://www.npmjs.com/package/concurrently) to provide a closs plataform solution for multiple `npm start` commands

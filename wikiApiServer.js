@@ -4,7 +4,7 @@ const cors = require('cors');
 
 app.use(cors()); //Accept CORS
 app.use(express.text());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }))
 
 let articles = [];
 
@@ -47,15 +47,3 @@ app.get('/articles/', function (req, res) {
 
 const restApiServer = app.listen(9090);
 console.log(`REST API server is listening on port ${restApiServer.address().port}`);
-
-const app2 = express();
-const path = require('path');
-app2.use(express.text());
-app2.use(express.urlencoded());
-app2.use(express.static('public'));
-
-//Serve the SPA static asset for those GET routes
-app2.get(['/','/:article', '/edit/*'], (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
-
-const spaServer = app2.listen(8080);
-console.log(`SPA server is listening on port ${spaServer.address().port}`);

@@ -12,6 +12,8 @@ const renderer = {
             for (var i = 0; i < json.length; i++) {
                 document.getElementById('content').innerHTML += `<div class='my-2'><a href='/${json[i].name}'>${json[i].name}</a><div>`;
             }
+        } else {
+            document.getElementById('content').innerText = 'No articles found.'
         }
     },
     renderViewArticlePage: (article, openEditMode) => {
