@@ -13,7 +13,7 @@ Yet to do:
 - Unit testing
 - Test a not valid Markdown
 
-Languages a libraries:
+Languages and libraries:
 
 - Node.js to provide full back-end funcionality
 - fetch to make http requests to wiki API routes
