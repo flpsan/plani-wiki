@@ -9,11 +9,6 @@ Instructions to run and test:
 - Done! SPA should be listening at localhost:8080 and the REST api at localhost:9090.
 - Test REST API with `npm test`.
 
-Yet to do:
-
-- Unit testing
-- Test a not valid Markdown
-
 Technologies and APIs used:
 
 - Node.js to provide full back-end funcionality
@@ -22,3 +17,7 @@ Technologies and APIs used:
 - [showdown.js](https://github.com/showdownjs/showdown) to convert plain text on Markdown notation to HTML
 - [concurrently.js](https://www.npmjs.com/package/concurrently) to provide a closs plataform solution for multiple `npm start` commands
 - [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/) for tests
+
+Yet to do:
+
+- Test invalid Markdown
