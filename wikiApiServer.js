@@ -47,3 +47,5 @@ app.get('/articles/', function (req, res) {
 
 const restApiServer = app.listen(9090);
 console.log(`REST API server is listening on port ${restApiServer.address().port}`);
+
+module.exports = { app: app, articles: articles };
