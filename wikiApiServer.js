@@ -6,6 +6,15 @@ app.use(cors()); //Accept CORS
 app.use(express.text());
 app.use(express.urlencoded({ extended: true }))
 
+const curlMiddleware = (req, res, next) => {
+    //A simple workaround to accept CURL -d because its content-type is not plain/text as expected
+    if (req.headers['content-type'] && 
+        req.headers['content-type'].toLowerCase() === 'application/x-www-form-urlencoded' &&
+        typeof req.body === 'object') {
+        req.body = Object.keys(req.body)[0];
+    }
+    next();
+}
 let articles = [];
 
 /**
@@ -18,9 +27,9 @@ app.get('/articles/', function (req, res) {
 /** 
  * Store an article endpoint.
  */
- app.put('/articles/:name', function (req, res) {
+ app.put('/articles/:name', curlMiddleware, function (req, res) {
+    let articleContent = req.body;
     let articleName = req.params.name;
-    let articleContent = typeof req.body !== 'string' ? '-' : req.body;
     let articleFromMemory = articles.find(article => article.name === articleName);
     if (articleFromMemory) {
         //Update the article

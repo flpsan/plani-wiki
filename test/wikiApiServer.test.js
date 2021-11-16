@@ -20,7 +20,6 @@ describe('Plani-Wiki REST API', () => {
                 });
         });
     });
-
     describe(`PUT /articles/article1 with body 'content_article1'`, () => {
         it(`it should insert article1 and return http status 201`, done => {
             chai.request(server)
@@ -92,6 +91,16 @@ describe('Plani-Wiki REST API', () => {
                     res.should.have.status(200);
                     res.should.to.be.html;
                     res.text.should.be.equal('content_article2');
+                    done();
+                });
+        });
+    });
+    describe('GET /articles/articleThatDoesNotExists', () => {
+        it(`it should return http status 404`, done => {
+            chai.request(server)
+                .get('/articles/articleThatDoesNotExists')
+                .end((err, res) => {
+                    res.should.have.status(404);
                     done();
                 });
         });
