@@ -1,8 +1,8 @@
 {
-  "name": "plani-wiki",
+  "name": "@flpsan/plani-wiki",
   "version": "1.0.0",
   "description": "A simple wiki API",
-  "main": "index.js",
+  "main": "wikiApiServer.js",
   "scripts": {
     "start": "node wikiApiServer.js && node spaServer.js",
     "test": "node test.js"
@@ -20,5 +20,11 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [
+    "wiki-api",
+    "wiki-spa",
+    "markdown"
+  ]
 }
